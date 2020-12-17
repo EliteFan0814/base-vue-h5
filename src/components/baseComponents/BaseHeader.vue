@@ -13,4 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.base-header{
+  border: 1px solid red;
+}
 </style>
