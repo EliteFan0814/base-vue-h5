@@ -1,12 +1,26 @@
 <template>
   <div class="layout">
-    <BaseHeader></BaseHeader>
+    <div class="tab-wrap">
+      <router-view></router-view>
+    </div>
+    <BaseTabbar></BaseTabbar>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Layout'
+  name: 'Layout',
+  data() {
+    return {}
+  },
+  created() {
+    this.test()
+  },
+  methods: {
+    test() {
+      console.log('xxx', process.env.BASE_URL)
+    }
+  }
 }
 </script>
 
