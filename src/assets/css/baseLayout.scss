@@ -6,6 +6,7 @@
   fill: currentColor;
   overflow: hidden;
 }
+// 常用 flex 布局
 .flex {
   display: flex;
   align-items: center;
@@ -20,4 +21,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+//
+.omit-1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
 }

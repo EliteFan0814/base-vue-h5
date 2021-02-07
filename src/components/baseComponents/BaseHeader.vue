@@ -6,8 +6,8 @@
           <use xlink:href="#icon-return"></use>
         </svg>
       </div>
-      <div class="item">{{title}}</div>
-      <div class="item">{{rightTitle}}</div>
+      <div class="item center omit-1">{{title}}</div>
+      <div class="item right-icon">{{rightTitle}}</div>
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: '标题'
+      default: '标题标题标题标题标题标题'
     },
     rightTitle: {
       type: String,
@@ -32,12 +32,27 @@ export default {
 
 <style lang="scss" scoped>
 .base-header {
-  border: 1px solid red;
+  padding: 0 5px;
   .header-wrap {
+    box-sizing: border-box;
     .item {
-      font-size: 18px;
-      border: 1px solid red;
-      width: 33.33%;
+      /* prettier-ignore */
+      font-size: 16PX;
+      /* prettier-ignore */
+      line-height: 30PX;
+      text-align: center;
+    }
+
+    .left-icon {
+      text-align: left;
+      width: 27.5%;
+    }
+    .center {
+      width: 45%;
+    }
+    .right-icon {
+      text-align: right;
+      width: 27.5%;
     }
   }
 }
