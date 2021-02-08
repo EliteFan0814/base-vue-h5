@@ -3,7 +3,9 @@
     <div class="tabbar-list flex-center">
       <div v-for="(item,index) in tabbarList" :key="index" @click="handleTab(item)" class="tabbar-item flex-column"
         :class="{'item-active':activeIndex === index}">
-        <img :src="activeIndex === index?item.activeIcon:item.icon" :alt="item.title">
+        <div class="img-wrap">
+          <img :src="activeIndex === index?item.activeIcon:item.icon" :alt="item.title">
+        </div>
         <span>{{item.title}}</span>
       </div>
     </div>
@@ -38,17 +40,37 @@ export default {
 
 <style lang="scss" scoped>
 .base-tabbar {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  // position: fixed;
+  // width: 100%;
+  // bottom: 0;
+  background-color: #fff;
   .tabbar-list {
-    font-size: 11px;
+    /* prettier-ignore */
+    padding: 5PX 0;
+    /* prettier-ignore */
+    font-size: 14PX;
+    /* prettier-ignore */
+    line-height: 15PX;
     .tabbar-item {
       width: 25%;
       color: #858585;
-      img {
-        width: 20px;
-        height: 21.5px;
+      .img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* prettier-ignore */
+        margin-bottom:5PX;
+        /* prettier-ignore */
+        width: 20PX;
+        /* prettier-ignore */
+        height: 20PX;
+        img {
+          display: block;
+          /* prettier-ignore */
+          max-width: 20PX;
+          /* prettier-ignore */
+          max-height: 20PX;
+        }
       }
     }
     .item-active {

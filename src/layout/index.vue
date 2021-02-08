@@ -25,4 +25,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.layout {
+  .tab-wrap {
+    border: 1px solid red;
+    /* prettier-ignore */
+    height:calc(100vh - 50PX);
+    overflow-y: scroll;
+  }
+}
 </style>

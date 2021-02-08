@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BaseHeader></BaseHeader>
+    <BaseHeader title="首页"></BaseHeader>
     主页
   </div>
 </template>

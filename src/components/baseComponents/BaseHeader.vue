@@ -7,8 +7,9 @@
         </svg>
       </div>
       <div class="item center omit-1">{{title}}</div>
-      <div class="item right-icon">{{rightTitle}}</div>
+      <div @click="openRight" class="item right-icon">{{rightTitle}}</div>
     </div>
+    <div class="holder"></div>
   </div>
 </template>
 
@@ -17,24 +18,36 @@ export default {
   props: {
     title: {
       type: String,
-      default: '标题标题标题标题标题标题'
+      default: '标题'
     },
     rightTitle: {
       type: String,
-      default: '右标题'
+      default: undefined
     }
   },
   data() {
     return {}
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    },
+    openRight() {
+      this.$emit('openRight')
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .base-header {
-  padding: 0 5px;
+  background-color: #fff;
   .header-wrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-sizing: border-box;
+    padding: 0 5px;
     .item {
       /* prettier-ignore */
       font-size: 16PX;
@@ -54,6 +67,10 @@ export default {
       text-align: right;
       width: 27.5%;
     }
+  }
+  .holder {
+    /* prettier-ignore */
+    height: 30PX;
   }
 }
 </style>
