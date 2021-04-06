@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <BaseHeader title="首页"></BaseHeader>
-    主页
+    <div>
+      主页
+    </div>
   </div>
 </template>
 
